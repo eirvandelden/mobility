@@ -1,8 +1,39 @@
 # Mobility Changelog
 
 ## Unreleased
-- Assign blank values in pg hash backends
-  ([#516](https://github.com/shioyama/mobility/pull/516))
+
+- Fix ActiveRecord JSONB blank values
+  ([#536](https://github.com/shioyama/mobility/pull/536))
+- Support primary keys other then :id on model classes
+  ([#542](https://github.com/shioyama/mobility/pull/542))
+
+## 1.2
+
+### 1.2.3
+- Fix passing wrong options to super in fallbacks plugin
+  ([#539](https://github.com/shioyama/mobility/pull/539))
+
+### 1.2.2
+- Make models work with `Marshal.dump`
+  ([#532](https://github.com/shioyama/mobility/pull/532))
+- Fix Sequel container op in Sequel
+  ([#533](https://github.com/shioyama/mobility/pull/533))
+- Simplify Fallbacks plugin
+  ([#531](https://github.com/shioyama/mobility/pull/531))
+
+### 1.2.1
+- Refactor ColumnFallback plugin
+  ([#530](https://github.com/shioyama/mobility/pull/530))
+
+### 1.2.0
+- Add ColumnFallback plugin
+  ([#512](https://github.com/shioyama/mobility/pull/512))
+- Fix Sequel querying on untranslated attributes in `i18n` block
+  ([#529](https://github.com/shioyama/mobility/pull/529))
+- Allow passing configured backend class as third argument to setup
+  ([#528](https://github.com/shioyama/mobility/pull/528))
+- Clearly distinguish backend classes from their configured subclasses
+  ([#527](https://github.com/shioyama/mobility/pull/527))
 
 ## 1.1
 
@@ -10,6 +41,8 @@
 - Do not swallow keyword args on ruby 3 in fallthrough accessors
   ([#520](https://github.com/shioyama/mobility/pull/520)) thanks
   [doits](https://github.com/doits)!
+- Assign blank values in pg hash backends
+  ([#516](https://github.com/shioyama/mobility/pull/516))
 
 ### 1.1.2
 - Check whether class responds to mobility_attribute?
