@@ -53,7 +53,7 @@ for aggregating attributes.
 
         def inherited(klass)
           super
-          attrs = mobility_attributes.freeze # ensure attributes are not modified after being inherited
+          attrs = mobility_attributes#.freeze # ensure attributes are not modified after being inherited
           klass.class_eval { @mobility_attributes = attrs.dup }
         end
       end
